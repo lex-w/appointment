@@ -1,0 +1,27 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.add-appointment {
+  position: fixed;
+  bottom: 0;
+  padding: 30rpx 0;
+  width: 100%;
+  background: #fefefe;
+}
+.btn {
+  width: 90%;
+  border-radius: 200rpx;
+  background-color: #ef2424;
+  color: #fefefe;
+}
