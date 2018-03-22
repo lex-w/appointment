@@ -1,5 +1,3 @@
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/lex-w/appointment.git
-git push -u origin master
+### 相约见面小程序
+
+#### 让好朋友之间快速找到想玩的地方
