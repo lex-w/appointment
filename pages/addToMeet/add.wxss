@@ -1,0 +1,117 @@
+/* pages/addToMeet/add.wxss */
+.block {
+  margin: 15rpx auto;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 15rpx;
+  box-shadow: 0 0 8px #ccc;
+  overflow: hidden;
+}
+
+.section {
+  padding: 30rpx 40rpx;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.section:active {
+  background-color: #ccc;
+}
+
+.section:first-child {
+  background-color: #fff;
+}
+
+.section:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+
+.section.theme {
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+}
+
+.section.theme input {
+  font-size: 18px;
+}
+
+.section view {
+  display: inline-block;
+}
+
+
+.iconstyle {
+  position: relative;
+  top: 2px;
+}
+
+.section_bd {
+  flex: 1;
+  padding-left: 15rpx;
+}
+
+.section_ft {
+  padding-right: 13px;
+  position: relative
+}
+
+.section_ft:after {
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 2px;
+}
+
+.mark {
+  padding: 30rpx;
+  font-size: 15px;
+}
+
+
+.add-appointment {
+  position: fixed;
+  bottom: 0;
+  padding: 30rpx 0;
+  width: 100%;
+  background: #fefefe;
+}
+.btn {
+  width: 90%;
+  border-radius: 200rpx;
+  background-color: #ef2424;
+  color: #fefefe;
+  transition: backgroundColor ease .5s;
+}
+.btn:active {
+  background-color: #bf1f1f;
+  color: #fefefe;
+  transition: backgroundColor ease .5s;
+}

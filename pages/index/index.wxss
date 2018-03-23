@@ -1,16 +1,4 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
 
 .add-appointment {
   position: fixed;
@@ -24,4 +12,10 @@
   border-radius: 200rpx;
   background-color: #ef2424;
   color: #fefefe;
+  transition: backgroundColor ease .5s;
+}
+.btn:active {
+  background-color: #bf1f1f;
+  color: #fefefe;
+  transition: backgroundColor ease .5s;
 }

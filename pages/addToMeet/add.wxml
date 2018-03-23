@@ -1,0 +1,74 @@
+<!--pages/addToMeet/add.wxml-->
+<view class="container">
+  <view class='block'>
+    <view class="section theme">
+      <view class='section_hd'>
+        <icon class='iconstyle' type="success" size="16" color='#ccc'/>
+      </view>
+      <view class='section_bd'>
+        <input placeholder="见面主题" auto-focus/>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class='section_hd'>
+        <icon class='iconstyle' type="waiting" size="16" color='#ccc'/>
+      </view>
+      <view class='section_bd'>
+        <text>时间</text>
+      </view>
+      <view class='section_ft'>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="picker">
+            {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+          </view>
+        </picker>
+      </view>
+    </view>  
+
+    <view class='section'>
+      <view class='section_hd'>
+        <icon class='iconstyle' type="success" size="16" color='#ccc'/>
+      </view>
+      <view class='section_bd'>
+        <text>地点</text>
+      </view>
+      <view class='section_ft'>
+        这个地址不告诉你
+      </view>
+    </view>
+
+    <view class='section'>
+      <view class='section_hd'>
+        <icon class='iconstyle' type="success" size="16" color='#ccc'/>
+      </view>
+      <view class='section_bd'>
+        <text>人员</text>
+      </view>
+      <view class='section_ft'>
+      </view>
+    </view>
+
+     <view class='section'>
+      <view class='section_hd'>
+        <icon class='iconstyle' type="success" size="16" color='#ccc'/>
+      </view>
+      <view class='section_bd'>
+        <text>提醒</text>
+      </view>
+      <view class='section_ft'>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='block'>
+    <view class='mark'>
+      <input placeholder="填写备注（选填）" />
+    </view>
+  </view>
+
+  <view class='add-appointment'>
+    <button class='btn' bindtap='bindViewTap'>开始预约见面</button>
+  </view>
+</view>
