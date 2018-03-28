@@ -10,7 +10,7 @@
       </view>
     </view>
 
-    <view class="section">
+    <view class="section" bindtap='changeTime'>
       <view class='section_hd'>
         <icon class='iconstyle' type="waiting" size="16" color='#ccc'/>
       </view>
@@ -18,13 +18,22 @@
         <text>时间</text>
       </view>
       <view class='section_ft'>
-        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-          <view class="picker">
-            {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
-          </view>
-        </picker>
+        {{day}}  {{hour}}:{{minute}}
       </view>
     </view>  
+    <view class='time-show {{timeIsShow ? "show" : ""}}'>
+      <picker-view indicator-style="height: 40px;" class='picker' value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:for="{{days}}" wx:key="{{item}}" style="line-height: 40px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{hours}}" wx:key="{{item}}" style="line-height: 40px">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{minutes}}" wx:key="{{item}}" style="line-height: 40px">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
 
     <view class='section'>
       <view class='section_hd'>
@@ -35,17 +44,6 @@
       </view>
       <view class='section_ft'>
         这个地址不告诉你
-      </view>
-    </view>
-
-    <view class='section'>
-      <view class='section_hd'>
-        <icon class='iconstyle' type="success" size="16" color='#ccc'/>
-      </view>
-      <view class='section_bd'>
-        <text>人员</text>
-      </view>
-      <view class='section_ft'>
       </view>
     </view>
 
