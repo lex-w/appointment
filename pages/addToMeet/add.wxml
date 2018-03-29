@@ -35,7 +35,7 @@
       </picker-view>
     </view>
 
-    <view class='section'>
+    <navigator url='../map/map' class='section'>
       <view class='section_hd'>
         <icon class='iconstyle' type="success" size="16" color='#ccc'/>
       </view>
@@ -45,7 +45,7 @@
       <view class='section_ft'>
         这个地址不告诉你
       </view>
-    </view>
+    </navigator>
 
      <view class='section'>
       <view class='section_hd'>
