@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 <view class="map_container">
   <!--定义页面结构，可以使用地图组件也能使用其他组件 -->
+=======
+
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+</view>
+<view class="map_text">
+  <text class="h1">{{textData.name}}</text>
+  <text>{{textData.desc}}</text>
+>>>>>>> b02e5048fcd75aafe84ec16af9d5217986862a5b
 </view>
