@@ -1,11 +1,9 @@
-var amapFile = require('../..//libs/amap-wx.js');
+var amapFile = require('../../libs/amap-wx.js');
+var config = require('../../libs/config.js')
 var markersData = [];
 Page({
   data: {
-    markers: [],
-    latitude: '',
-    longitude: '',
-    textData: {}
+    tips: {}
   },
   makertap: function (e) {
     var id = e.markerId;
@@ -14,52 +12,32 @@ Page({
     that.changeMarkerColor(markersData, id);
   },
   onLoad: function () {
+    
+  },
+  bindInput: function (e) {
     var that = this;
-    var myAmapFun = new amapFile.AMapWX({ key: '340bb65f195cbc532825c5f4ab7ad9a4' });
-    myAmapFun.getPoiAround({
-      //iconPathSelected: '选中 marker 图标的相对路径', //如：..­/..­/img/marker_checked.png
-      //iconPath: '未选中 marker 图标的相对路径', //如：..­/..­/img/marker.png
+    var keywords = e.detail.value;
+    var key = config.Config.key;
+    var myAmapFun = new amapFile.AMapWX({ key: key });
+    myAmapFun.getInputtips({
+      keywords: keywords,
+      location: '',
       success: function (data) {
-        markersData = data.markers;
-        that.setData({
-          markers: markersData
-        });
-        that.setData({
-          latitude: markersData[0].latitude
-        });
-        that.setData({
-          longitude: markersData[0].longitude
-        });
-        that.showMarkerInfo(markersData, 0);
-      },
-      fail: function (info) {
-        wx.showModal({ title: info.errMsg })
+        if (data && data.tips) {
+          that.setData({
+            tips: data.tips
+          });
+        }
+
       }
     })
   },
-  showMarkerInfo: function (data, i) {
-    var that = this;
-    that.setData({
-      textData: {
-        name: data[i].name,
-        desc: data[i].address
-      }
-    });
-  },
-  changeMarkerColor: function (data, i) {
-    var that = this;
-    var markers = [];
-    for (var j = 0; j < data.length; j++) {
-      if (j == i) {
-        data[j].iconPath = "选中 marker 图标的相对路径"; //如：..­/..­/img/marker_checked.png
-      } else {
-        data[j].iconPath = "未选中 marker 图标的相对路径"; //如：..­/..­/img/marker.png
-      }
-      markers.push(data[j]);
-    }
-    that.setData({
-      markers: markers
-    });
+  bindSearch: function (e) {
+    var keywords = e.currentTarget.dataset.keywords;
+    var url = '../addToMeet/add?keywords=' + keywords;
+    console.log(url)
+    wx.navigateTo({
+      url: url
+    })
   }
-
 })

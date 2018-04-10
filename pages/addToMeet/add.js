@@ -82,6 +82,11 @@ Page({
       hour: this.data.hours[val[1]],
       minute: this.data.minutes[val[2]]
     })
+  },
+  bindMap: function() {
+    wx.navigateTo({
+      url: '../map/map'
+    })
   }
   
 })

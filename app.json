@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/addToMeet/add",
+    "pages/map/map",
     "pages/index/index",
-    "pages/detail/detail",
-    "pages/map/map"
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
