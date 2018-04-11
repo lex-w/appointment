@@ -60,10 +60,23 @@ Page({
     minutes: minutes,
     minute: minutes[hm.minute],
     value: value,
-    timeIsShow: false
+    timeIsShow: false,
+    address: ''
+  },
+  onShow: function() {
+    var that = this;
+    var pages = getCurrentPages()
+    var currPage = pages[pages.length - 1];
+    if (currPage.data.keywords) {
+      that.setData({
+        address: currPage.data.keywords,
+        timeIsShow: false
+      })
+    }
+    
   },
   // 修改时间
-  changeTime: function (e) {
+  changeTime: function () {
     if(this.data.timeIsShow) {
       this.setData({
         timeIsShow: false
@@ -84,8 +97,9 @@ Page({
     })
   },
   bindMap: function() {
+    var that = this
     wx.navigateTo({
-      url: '../map/map'
+      url: '../map/map?address=' + that.data.address
     })
   }
   

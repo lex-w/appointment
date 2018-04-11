@@ -1,7 +1,7 @@
 <view class="container">
   <view class="section">
     <icon class='searchStyle' type="search" size="16" color='#ccc'/>
-    <input bindinput="bindInput" placeholder="请输入见面地址" focus="true" />
+    <input bindinput="bindInput" value='{{searchStr}}' focus='true' placeholder="请输入见面地址" focus="true" />
   </view>
   <view class='address_list'>
     <view class="text_box" catchtap="bindSearch" data-location="{{i.location}}" data-keywords="{{i.name}}" class="text_box" wx:for="{{tips}}" wx:for-item="i" wx:key="i"> 

@@ -1,0 +1,9 @@
+@import "../../libs/weui.wxss";
+
+.noTimeTip {
+  padding-top: 10px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: #909090;
+}

@@ -6,7 +6,7 @@
         <icon class='iconstyle' type="success" size="16" color='#ccc'/>
       </view>
       <view class='section_bd'>
-        <input placeholder="见面主题" auto-focus/>
+        <input placeholder="见面主题" focus="true" />
       </view>
     </view>
 
@@ -43,7 +43,7 @@
         <text>地点</text>
       </view>
       <view class='section_ft'>
-        这个地址不告诉你
+        {{address}}
       </view>
     </view>
 

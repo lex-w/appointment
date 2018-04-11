@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/index/index",
+    "pages/remind/remind",
     "pages/addToMeet/add",
     "pages/map/map",
-    "pages/index/index",
+    
     "pages/detail/detail"
   ],
   "window":{
