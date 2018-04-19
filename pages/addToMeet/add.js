@@ -61,7 +61,8 @@ Page({
     minute: minutes[hm.minute],
     value: value,
     timeIsShow: false,
-    address: ''
+    address: '',
+    remind: -1
   },
   onShow: function() {
     var that = this;
@@ -100,6 +101,12 @@ Page({
     var that = this
     wx.navigateTo({
       url: '../map/map?address=' + that.data.address
+    })
+  },
+  bindRemind: function() {
+    var that = this;
+    wx.navigateTo({
+      url: '../remind/remind?remind' + that.data.remind,
     })
   }
   

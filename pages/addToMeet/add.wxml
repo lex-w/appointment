@@ -47,7 +47,7 @@
       </view>
     </view>
 
-     <view class='section'>
+     <view class='section' bindtap='bindRemind'>
       <view class='section_hd'>
         <icon class='iconstyle' type="success" size="16" color='#ccc'/>
       </view>

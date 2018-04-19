@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/addToMeet/add",
     "pages/index/index",
     "pages/remind/remind",
-    "pages/addToMeet/add",
+    
     "pages/map/map",
     
     "pages/detail/detail"
